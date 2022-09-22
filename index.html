@@ -9,54 +9,162 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <!--Navbar-->
     <nav class="navbar">
-        <div class="navbar__container">
+        <div class="container navbar__container">
             <a href="/" id="navbar__logo">
-                <img src="images/Aba-Logo.png" alt="Aba Logo" class="logo" height="75" />
+                <img src="images/Aba-Logo.png" alt="Aba Logo" class="logo" height="200" />
             </a>
-            <div class="navbar__toggle" id="mobile-menu">
+            <div id="mobile-menu" class="navbar__toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">RESERVE</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">MENU</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">GROUP DINING</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">EVENTS</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">TEAM</a>
-                </li>
-            </ul>
+            <div class="navbar__list">
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">RESERVE</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">MENU</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">GROUP DINING</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">EVENTS</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">TEAM</a>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     </nav>
 
     <!--Hero-->
-    <div class="main">
-        <div class="main__container">
-            <div class="main__content">
-                <img src="images/up-47.jpg" alt="Platter Sample" class="hero__img" height="500" />
-                <img src="images/Aba_VillageSalad.jpg" alt="Village Salad" class="hero__img" height="500" />
-            </div>
+    <div class="hero">
+        <div class="container hero__container">
+                <img src="images/up-47.jpg" alt="Platter Sample" class="hero__img" height="850px"/>
+                <img src="images/Aba_VillageSalad.jpg" alt="Village Salad" class="hero__img" height="850px"/>
         </div>
     </div>
 
     <!--Form-->
-
+    <section class="form">
+        <div class="container form__container">
+            <form>
+                <h2>MAKE A RESERVATION</h2>    
+                <div class="input input__1 active">
+                    <input type="text" id="date" class="input__box" placeholder="June 4, 2018" required/>
+                    <input type="text" id="time" class="input__box" placeholder="8:30pm" required/>
+                    <input type="text" id="size" class="input__box" placeholder="6 people" required/> 
+                    <button type="submit" class="button next__button">Find a Table</button>
+                </div>    
+                <div class="input input__2">
+                    <input type="text" id="name" class="input__box" placeholder="Name" required/>
+                    <input type="text" id="phone" class="input__box" placeholder="Phone Number" required/>
+                    <input type="text" id="email" class="input__box" placeholder="Email" required/> 
+                    <button type="submit" class="button next__button">Submit</button>   
+                </div> 
+                <div class="input form__complete">
+                    <h1>Thank you, your registration is now complete.</h1>
+                </div>
+            </form>
+        </div>
+    </section>
+    
     <!--Body-->
-
+    <main>
+        <div class="container main__container">
+            <article id="group__dining" class="main__content">
+                <div class="body__text">
+                    <h2>GROUP DINING AT ABA</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reiciendis quisquam repellendus, quam id necessitatibus totam tenetur iusto ea ratione velit consequatur deserunt odit eligendi cumque consequuntur ipsa facere similique.</p>
+                    <button type="button" class="button">PLAN YOUR PARTY</button>
+                </div>
+                <div class="img__container">
+                    <img src="images/up-35.jpg" alt="Pizza" id="pizza" class="body__img"/>
+                </div>
+            </article>
+            <article id="wine__dinner" class="main__content">
+                <div class="img__container">
+                    <img src="images/up-35.jpg" alt="Pizza Closeup" id="pizza__closeup" class="body__img"/>
+                </div>
+                <div class="body__text">
+                    <h2>WINE DINNER</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil amet voluptas eveniet optio voluptate commodi. Eveniet esse commodi ipsa laborum at, deserunt sapiente aliquam placeat consequatur, aperiam tempora laboriosam quas.<br>
+                    <br>June 13th, 2018 at 7pm</p>
+                    <button type="button" class="button">LEARN MORE</button>
+                </div>
+            </article>
+            <article id="about__aba" class="main__content">
+                <div class="body__text">
+                    <h2>ABOUT ABA</h2>
+                    <p>Aba is a restaurant with a rooftop patio located in Chicago's historic Fulton Market District. This is Chef CJ Jacobson's second restaurant with Lettuce Entertain You, and is an extension of Ēma's style of cooking with a larger influence of steak, raw and chilled seafood. The beverage program is crafted by Wine Director Ryan Arnold and Mixologist Liz Pearce and showcases Mediterranean-inspired rare wines and spirits.</p>
+                </div>
+                <div class="img__container">
+                    <img src="images/up-42.jpg" alt="Wrap" id="wrap" class="body__img"/>
+                </div>
+            </article>
+        </div>
+    </main>
+    
     <!--Footer-->
-    <script src="app.js"></script>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <div class="footer__column">
+                    <h2>HOURS</h2>
+                    <p>Tues - Thurs 12pm - 10pm<br>
+                    Fri 12pm - 1am<br>
+                    Sat 11am - 1am<br>
+                    Sun 10am - 9pm</p>
+                    <br>
+                    <ul id="contact__list" class="footer__column">
+                        <li>
+                            <a href="/" class="footer__links">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="/" class="footer__links">NEWSLETTER</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="footer__column">
+                    <h2>LOCATIONS</h2>
+                    <p>302 N Green Street,<br>
+                    3rd Floor<br>
+                    Chicago, IL 60607</p>
+                    <a class="telephone__number" href="tel:7736451400">773-645-1400</a>
+                </div>
+            </div>
+
+            <ul class="footer__menu">
+                <li class="footer__item">
+                    <a href="/" class="footer__links">FREQUENT DINER</a>
+                </li>
+                <li class="footer__item">
+                    <a href="/" class="footer__links">GIFT CARDS</a>
+                </li>
+                <li class="footer__item">
+                    <a href="/" class="footer__links">EMPLOYMENT</a>
+                </li>
+                <li class="footer__item">
+                    <a href="/" class="footer__links">LEYE.COM</a>
+                </li>
+                <li class="footer__item">
+                    <a href="/" class="footer__links">TERM OF USE</a>
+                </li>
+                <li class="footer__item">
+                    <a href="/" class="footer__links">PRIVATE POLICY</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -2,7 +2,6 @@
 const toggleButton = document.getElementsByClassName("navbar__toggle")[0]
 const navLinks = document.getElementsByClassName("navbar__menu")[0]
 
-
 toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('active')
 })
@@ -27,6 +26,7 @@ form.addEventListener("submit", (e) => {
     console.log(inputs);  
     form.reset();  
 });  
+
 function changeStep(btn) {  
     let index = 0;  
     const active = document.querySelector(".active");  

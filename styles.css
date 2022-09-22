@@ -21,7 +21,8 @@ body h2 {
     background-color: navy;
     border: none;
     color: white;
-    padding: 5px 50px;
+    padding: 5px 0px;
+    width: 200px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -86,13 +87,13 @@ body h2 {
 
 .navbar__toggle {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 75x;
+    right: 50px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    width: 75px;
+    height: 50px;
 }
 
 .navbar__toggle .bar {
@@ -252,7 +253,7 @@ p {
 }
 
 /*Mobile*/
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     body {
         font-size: 1rem;
         letter-spacing: .1em;
@@ -263,112 +264,122 @@ p {
     }
 
     /*Navbar*/
-    .navbar__toggle {
-        display: flex;
-    }
 
     .navbar__container {
-        width: 100%;
+        justify-content: left;
     }
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    .logo {
+        padding: 0;          
+        height: 100px;
+    }
+
+    .navbar__toggle {
+        display: flex;
+        cursor: pointer;
     }
 
     .navbar__menu {
         display: none;
-        flex-direction: column;
+        justify-content: center;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .navbar__list {
         width: 100%;
     }
 
-    .navbar__item {
-        text-align: center;
-    }
-
-    .navbar__menu.active {
-        display: flex;
-    }
-
-/*
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-    }
-
-    .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;
-        z-index: -1;
-    }
-
-    .navbar__menu.active {
+    .navbar__list.active {
         background: white;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.5rem;
-    }
-
-    #navbar__logo {
-        padding-left: 25px;
-    }
-
-    .navbar__toggle .bar {
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.5s ease-in-out;
-        background-color: black;
     }
 
     .navbar__item {
-        width: 100%;
-    }
-
-    .navbar__links {
         text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
     }
 
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
-
-    .navbar__toggle .bar {
+    .navbar__menu.active {
         display: block;
-        cursor: pointer;
     }
 
-    #mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0;
+    /*Hero*/
+    .hero__container {
+        padding: 12px;
+        height: 400px;
+    }
+    .hero__img {
+        padding: 5px;
     }
 
-    #mobile-menu.is-active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+    /*Form*/
+    .form{
+        margin: 0;
+        padding: 12px 300px;
+        border-top: none;
+        border-bottom: none;
     }
 
-    #mobile-menu.is-active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+    .input .button {
+        width: 250px;
     }
-    */
+    
+    .input__box {
+        float: none;
+        margin-bottom: 5px;
+        width: 250px;
+        height: 30px;
+        }
+
+    /*Body*/
+    .main__container {
+        margin: 10px 0;
+    }
+    
+    .img__container {
+        height: 300px;
+        min-width: 300px; 
+    }
+    
+    #pizza {
+        height: 300px;
+        width: 300px;
+    }
+    
+    #pizza__closeup {
+        height: 500px;
+        width: 500px;
+    }
+    
+    #wrap {
+        height: 300px;
+        width: 300px;
+    }
+    
+    .body__text {
+        padding: 12px 50px;
+        border-top: none;
+        border-bottom: none;
+    }
+    
+    p {
+        padding: 12px 0;
+    }
+    /*Footer*/
+    .footer__container {
+        align-content: center;
+    }
+    
+    .footer__info {
+        justify-content: center;
+        padding: 25px 0 25px 0;
+    }
+
+    .footer__links {
+        font-size: .75rem;
+        padding-right: 1rem;
+    }
+
+    .footer__item {
+        font-size: .75rem;
+    }
 }
